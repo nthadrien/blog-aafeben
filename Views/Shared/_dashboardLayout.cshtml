@@ -1,0 +1,15 @@
+@{
+    Layout = "/_Layout";
+}
+<div class="main-content-two-col">
+@RenderBody()
+</div>
+@section scripts {
+  @RenderSection("scripts", required: false)
+}
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - aafeben - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>

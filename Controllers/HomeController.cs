@@ -23,6 +23,13 @@ public class HomeController : Controller
         return View();
     }
 
+    [Route("Home/a-propos-de-nous")]
+    public IActionResult AProposDeNous ()
+    {
+        Console.WriteLine("Aprorprorp");
+        return View();
+    }
+
 
     public IActionResult Contacts()
     {

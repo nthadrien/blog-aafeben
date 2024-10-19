@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  border-radius: 0px;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 
@@ -38,6 +40,10 @@ input, textarea, button {
   color: turquoise;
 }
 
+.border-turq {
+  border: 1px solid turquoise;
+}
+
 .nav-link, a {
   color: inherit;
 }
@@ -48,4 +54,40 @@ input, textarea, button {
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
+}
+
+.blog-header {
+  min-height: 70vh;
+  max-height: 980px;
+  display: flex;
+  place-items: center;
+} 
+
+
+.mon-accordion {
+  cursor: pointer;
+}
+
+.mon-accordion label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mon-accordion p {
+  max-height: 0px;
+  transition:  all 0.5s linear;
+}
+
+.mon-accordion:hover p {
+  max-height: max-content;
+}
+
+.mon-accordion:hover {
+  background-color: rgba(245, 245, 245, 0.356);
+}
+
+.mon-accordion:hover .bi-chevron-down {
+  transform: rotate(180deg);
 }

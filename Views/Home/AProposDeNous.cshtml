@@ -1,0 +1,94 @@
+@{
+    ViewData["Title"] = "About Us Page";
+    ViewData["Description"] = "Page d'apropos de nous !!!";
+}
+
+<section class="container-fluid row g-0 row-cols-1 row-cols-lg-2 justify-content-center align-items-start">
+
+    <div style="max-width: 640px;" class="col py-4 px-3">
+
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">
+            Nous sommes une organisation à but non lucratif
+        </h1>
+
+        <p class="text-success">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fugit, culpa perferendis neque consequatur inventore mollitia fuga architecto, quos beatae nobis porro unde, minus animi iusto deserunt quas. Iste, asperiores!
+        </p>
+
+        <p class="fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+
+    </div>
+
+    <div class="bg-dark col-xl-6 ">
+        <img height="600px" width="100%" class="object-fit-cover" src="https://placehold.co/400" alt="a00">
+    </div>
+
+</section>
+
+
+@* Partenaires start---------------------------------------------- *@
+
+<partial name="_Partenaires.cshtml" />
+
+@* team section start---------------------------------------------- *@
+<section class="container-fluid bg-body-tertiary py-4 text-center px-3">
+
+    <h1 class="my-3">Notre Team</h1>
+
+    <div class="container mx-auto row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-evenly g-3 py-4">
+
+        @for( int i = 0; i <= 5; i++ ) {
+
+        <div class="col text-center">
+
+            <img height="90px" width="90px" class="object-fit-cover rounded-circle border-turq" src="https://placehold.co/400" alt="a00">
+
+            <p>
+                <span class="text-primary small"> CO-Foundateur</span>
+                <br/> <b>Mr Arnold Messi</b>
+            </p>
+            <p>
+                Eos Tempore, dolorum, sunt quis repellendus voluptates voluptatibus fugit, iure natus ex repellat possimus!
+            </p>
+
+        </div>
+
+        }
+    </div>
+
+</section>
+
+
+@* FAQ start---------------------------------------------- *@
+<section id="faq" class="container py-5 px-3">
+
+    <h1 class="text-center">
+        F.A.Q <br/>
+        <span class="fs-5 text-muted" >Foire Aux Questions</span>
+    </h1>
+
+    @for( int i = 0; i < 5; i++ ) {
+
+        <div class="mon-accordion text-start p-1 mb-2">
+
+            <label class="border-bottom fw-bold w-100 p-2">
+
+                <span>
+                    <i class="bi bi-patch-question me-2 "></i>
+                    Question
+                </span>
+
+                @* <input type="radio" name="faq" class="visually-hidden" /> *@
+
+                <i class="bi bi-chevron-down text-end"></i>
+            </label>
+            
+            <p class="overflow-hidden">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto inventore exercitationem incidunt molestiae, optio non quasi odit asperiores quaerat consequuntur quod, nesciunt quam aut ab sit, dolorem quia earum!
+            </p>
+
+        </div>
+        }
+
+
+</section>

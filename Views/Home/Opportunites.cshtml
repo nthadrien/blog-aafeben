@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Les Opportunites";
+    ViewData["Description"] = "Description De la page opportunitesIpsum illo aut vel id atque velit natus odit quam tenetur expedita corporis magni nihil voluptatem consequatur porro quaerat.";
+}
+
+
+
+<h2></h2>
+
+<main class="container p-3 d-flex flex-column gap-3">
+
+
+    <p> L"AAFEBEN représente un espace dynamique et enrichissant pour ceux qui souhaitent s'engager et contribuer à des causes importantes. Que ce soit par le bénévolat ou en tant qu'employé, les opportunités offertes sont variées et peuvent avoir un impact durable sur les individus et les communautés. </p>
+    <p>C'est pourquoi nous offrons des opportunités aux jeunes et aux personnes qui nous entourent. N'hésitez pas à consulter la liste ci-dessous</p>
+
+
+    @for( int i = 0; i < 5; i++ ) {
+
+        <div class="mon-accordion text-start p-1 mb-2">
+
+            <label class="border-bottom fw-bold w-100 p-2">
+
+                <span>
+                    <i class="bi bi-patch-question me-2 "></i>
+                    Question
+                </span>
+
+                @* <input type="radio" name="faq" class="visually-hidden" /> *@
+
+                <i class="bi bi-chevron-down text-end"></i>
+            </label>
+            
+            <p class="overflow-hidden">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto inventore exercitationem incidunt molestiae, optio non quasi odit asperiores quaerat consequuntur quod, nesciunt quam aut ab sit, dolorem quia earum!
+            </p>
+
+        </div>
+    }
+
+</main>

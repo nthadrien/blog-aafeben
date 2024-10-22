@@ -8,7 +8,9 @@
 
 
 html {
-  font-size: 13px;
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
 }
 
 @media (min-width: 968px) {
@@ -17,16 +19,31 @@ html {
   }
 }
 
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+/* My css edits */
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* My css edits */
+a:hover {
+  color: green;
+}
+
+::placeholder, ::-moz-placeholder , ::-ms-placholder {
+  opacity: 0.6;
+  color: lightgray;
+}
+
+.full-page {
+  min-height: 100vh;
+  max-width: 100%;
+}
 
 input, textarea, button {
   border-radius: 0;
@@ -63,7 +80,7 @@ input, textarea, button {
   place-items: center;
 } 
 
-
+/* accordion css */
 .mon-accordion {
   cursor: pointer;
 }
@@ -90,4 +107,87 @@ input, textarea, button {
 
 .mon-accordion:hover .bi-chevron-down {
   transform: rotate(180deg);
+}
+
+/* projet card */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.project-card img {
+  max-height: 360px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-card .day  {
+  display: inline-block;
+  width: max(64px,10%);
+  position: absolute;
+  top: calc(80%);
+  left: max( 6%, 18px);
+}
+
+/* login  */
+.login {
+  max-width: min(100%, 480px);
+  width: 100%;
+
+}
+
+/* navbar */
+.side-nav {
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  min-width: fit-content;
+  z-index: 10;
+}
+
+.nav-offcanvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.6rem;
+  width: 190px;
+  padding: 1rem;
+}
+
+.nav-offcanvas a , .nav-offcanvas .btn {
+  width: 100%;
+  min-width: 128px;
+
+  &:hover {
+    font-weight: bolder;
+    color: white;
+    background-color: turquoise;
+  }
+
+  &.active {
+    color: white;
+    background-color: #258cfb;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-offcanvas {
+    width: 260px;
+  }
+}
+
+
+
+/* projet page */
+
+.project-page {
+
+  & h1, h2 , h3 , h4 {
+    margin-top: 2rem;
+  }
+
 }

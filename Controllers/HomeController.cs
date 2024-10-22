@@ -23,15 +23,49 @@ public class HomeController : Controller
         return View();
     }
 
-    [Route("Home/a-propos-de-nous")]
+    public IActionResult Dash()
+    {
+        return View();
+    }
+
+    // [Route("Home/a-propos-de-nous")]
     public IActionResult AProposDeNous ()
     {
-        Console.WriteLine("Aprorprorp");
+        
+        // Create an array of dictionaries
+        var Faq = new List<Dictionary<string, object>>();
+
         return View();
     }
 
 
+    public IActionResult Projets ()
+    {
+        return View();
+    }
+
+    public IActionResult Projet  ()
+    {
+        return View();
+    }
+
+    public IActionResult Opportunites  ()
+    {
+        return View();
+    }
+
+    public IActionResult Actualites  ()
+    {
+        var message = HttpContext.Request.PathBase;
+        return View();
+    }
+
     public IActionResult Contacts()
+    {
+        return View();
+    }
+
+    public IActionResult Login()
     {
         return View();
     }

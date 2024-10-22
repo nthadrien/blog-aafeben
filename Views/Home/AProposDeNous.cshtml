@@ -1,22 +1,32 @@
 @{
     ViewData["Title"] = "About Us Page";
-    ViewData["Description"] = "Page d'apropos de nous !!!";
+    ViewData["Description"] = "La portée géographique des interventions d'AAFEBEN se situe dans le paysage du TNS et du TRIDOM dans la région de l’Est Cameroun";
 }
 
 <section class="container-fluid row g-0 row-cols-1 row-cols-lg-2 justify-content-center align-items-start">
 
     <div style="max-width: 640px;" class="col py-4 px-3">
 
-        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">
-            Nous sommes une organisation à but non lucratif
+        <h2>Notre vision </h2>
+
+        <h1 class="display-5 fw-bold lh-1 text-body-emphasis mb-3">
+            Nous voulons améliorer la vie et le bien-être des communautés locales 
         </h1>
 
-        <p class="text-success">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fugit, culpa perferendis neque consequatur inventore mollitia fuga architecto, quos beatae nobis porro unde, minus animi iusto deserunt quas. Iste, asperiores!
+        <p class="lead">
+           Les peuples autochtones et communautés locales, y compris les femmes et 
+           les jeunes tirent des bénéfices économiques de la gestion durable des ressources forestières 
+           dans les paysages TRIDOM et TNS pour leur bien-être.
         </p>
 
-        <p class="fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        <h2>
+            Notre Mission
+        </h2>
 
+        <p class="lead">
+            Nous avons pour mission d'accompagner les communautés à la gestion rationnelle et durable de leurs ressources naturelles 
+            et la prise de conscience de leurs atouts pour leur développement.
+        </p>
     </div>
 
     <div class="bg-dark col-xl-6 ">
@@ -26,6 +36,9 @@
 </section>
 
 
+@* Annexes etc autres *@
+
+
 @* Partenaires start---------------------------------------------- *@
 
 <partial name="_Partenaires.cshtml" />
@@ -33,7 +46,11 @@
 @* team section start---------------------------------------------- *@
 <section class="container-fluid bg-body-tertiary py-4 text-center px-3">
 
-    <h1 class="my-3">Notre Team</h1>
+    <h1 class="my-3">Notre staff</h1>
+
+    <p>
+       Nous sommes majoritairement jeunes et dynamiques. C'est avec plaisir que nous vous présentons notre staff
+    </p>
 
     <div class="container mx-auto row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-evenly g-3 py-4">
 
@@ -88,7 +105,7 @@
             </p>
 
         </div>
-        }
+    }
 
 
 </section>

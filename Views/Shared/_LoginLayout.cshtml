@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -10,18 +10,9 @@
     <link rel="stylesheet" href="~/aafeben.styles.css" asp-append-version="true" />
 </head>
 
-<body data-bs-theme="auto">
-    <partial name="_LangSelectorBar.cshtml" />
-    <partial name="_Navbar.cshtml" />
-    <partial name="_BlogHeader.cshtml" />
-
-
- 
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-
-    <partial name="_Footer.cshtml" />
+<body data-bs-theme="light">
+    
+    @RenderBody()
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using aafeben.Models;
+using Microsoft.Extensions.Localization;
 
 namespace aafeben.Controllers;
 
@@ -31,13 +32,10 @@ public class HomeController : Controller
     // [Route("Home/a-propos-de-nous")]
     public IActionResult AProposDeNous ()
     {
-        
         // Create an array of dictionaries
         var Faq = new List<Dictionary<string, object>>();
-
         return View();
     }
-
 
     public IActionResult Projets ()
     {

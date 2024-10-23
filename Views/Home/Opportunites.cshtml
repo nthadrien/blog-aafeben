@@ -5,34 +5,89 @@
 
 
 
-<h2></h2>
+<h1 class="text-center my-4">@ViewData["Title"]</h1>
 
-<main class="container p-3 d-flex flex-column gap-3">
-
-
-    <p> L"AAFEBEN représente un espace dynamique et enrichissant pour ceux qui souhaitent s'engager et contribuer à des causes importantes. Que ce soit par le bénévolat ou en tant qu'employé, les opportunités offertes sont variées et peuvent avoir un impact durable sur les individus et les communautés. </p>
-    <p>C'est pourquoi nous offrons des opportunités aux jeunes et aux personnes qui nous entourent. N'hésitez pas à consulter la liste ci-dessous</p>
+<main class="container py-3 px-3 d-flex flex-column gap-3">
 
 
+    <section style="max-width: 968px;" class="mx-auto">
+        <p class="lead"> 
+            L"AAFEBEN fournit un espace dynamique et enrichissant pour ceux qui souhaitent 
+            s'engager et contribuer à des causes importantes. 
+            Que ce soit par le bénévolat ou en tant qu'employé, les opportunités offertes sont variées et peuvent avoir un 
+            impact durable sur les individus et les communautés. 
+        </p>
+        <p>
+            C'est pourquoi nous offrons des opportunités aux jeunes et aux personnes qui nous entourent. 
+            N'hésitez pas à consulter la liste ci-dessous
+        </p>
+    </section>
+
+
+
+    <div class="my-3 p-3 bg-body rounded shadow-lg">
+
+        <div class="d-flex align-items-center p-3 my-3 w-100 text-white bg-turq rounded shadow-sm mx-auto">
+            <i class="bi bi-people display-3 me-3"></i> 
+            <h1 class="h6 mb-0 text-white lh-1">opportunités les plus recente</h1>
+        </div>
+
+
+    <aside class="mon-accordion-2 py-3 d-flex justify-content-evenly gap-1 align-items-start border-bottom w-100">
+
+        <i class="btn btn-secondary display-3 bi bi-person-lines-fill bd-placeholder-img flex-shrink-0 me-2 rounded"></i>
+        
+        <div class=" text-body-secondary">
+
+            <div class="d-flex justify-content-between flex-wrap">
+                <span class="d-block h4 text-gray-dark">Nom du Post</span> 
+
+                <small>Type: Benevolat</small>
+            </div>
+            <p> 
+                Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
+            </p>
+
+            <label class="btn btn-sm btn-secondary">
+                Plus de Details <input type="radio" class="visually-hidden" name="accordion" id="accordion">
+            </label>
+
+            <div  class="accord-text">
+                <h6 class="text-body-emphasis">Requirements</h6>
+                <p>Ready to go beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
+                <ul>
+                    <li> Age entre 34 - 45 ans.</li>
+                    <li> Etre bilingue: Parler anglais et francais </li>
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+
+    <div class="d-flex text-body-secondary pt-3">
+      <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"></rect><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
+      <p class="pb-3 mb-0 small lh-sm border-bottom">
+        <strong class="d-block text-gray-dark">Nom du Post</strong>
+        Some more representative placeholder content, related to this other user. Another status update, perhaps.
+      </p>
+    </div>
+    <div class="d-flex text-body-secondary pt-3">
+      <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"></rect><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
+      <p class="pb-3 mb-0 small lh-sm border-bottom">
+        <strong class="d-block text-gray-dark">Nom du Post</strong>
+        This user also gets some representative placeholder content. Maybe they did something interesting, and you really want to highlight this in the recent updates.
+      </p>
+    </div>
+    <small class="d-block text-end mt-3">
+      <a href="#">3 postes Vacants</a>
+    </small>
+  </div>
+
+
+    
     @for( int i = 0; i < 5; i++ ) {
 
-        <div class="mon-accordion text-start p-1 mb-2">
-
-            <label class="border-bottom fw-bold w-100 p-2">
-
-                <span>
-                    <i class="bi bi-patch-question me-2 "></i>
-                    Question
-                </span>
-
-                @* <input type="radio" name="faq" class="visually-hidden" /> *@
-
-                <i class="bi bi-chevron-down text-end"></i>
-            </label>
-            
-            <p class="overflow-hidden">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis architecto inventore exercitationem incidunt molestiae, optio non quasi odit asperiores quaerat consequuntur quod, nesciunt quam aut ab sit, dolorem quia earum!
-            </p>
+        <div class="mon-accordion text-start">
 
         </div>
     }

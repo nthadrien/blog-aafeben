@@ -1,31 +1,28 @@
 @{
-    ViewData["Title"] = "About Us Page";
-    ViewData["Description"] = "La portée géographique des interventions d'AAFEBEN se situe dans le paysage du TNS et du TRIDOM dans la région de l’Est Cameroun";
+    ViewData["Title"] = @Localizer["title"];
+    ViewData["Description"] = @Localizer["desc"];
 }
 
 <section class="container-fluid row g-0 row-cols-1 row-cols-lg-2 justify-content-center align-items-start">
 
     <div style="max-width: 640px;" class="col py-4 px-3">
 
-        <h2>Notre vision </h2>
+        <h2>@Localizer["vision"]</h2>
 
         <h1 class="display-5 fw-bold lh-1 text-body-emphasis mb-3">
-            Nous voulons améliorer la vie et le bien-être des communautés locales 
+           @Localizer["vSummary"]
         </h1>
 
         <p class="lead">
-           Les peuples autochtones et communautés locales, y compris les femmes et 
-           les jeunes tirent des bénéfices économiques de la gestion durable des ressources forestières 
-           dans les paysages TRIDOM et TNS pour leur bien-être.
+           @Localizer["vtxt"]
         </p>
 
         <h2>
-            Notre Mission
+            @Localizer["mission"]
         </h2>
 
         <p class="lead">
-            Nous avons pour mission d'accompagner les communautés à la gestion rationnelle et durable de leurs ressources naturelles 
-            et la prise de conscience de leurs atouts pour leur développement.
+            @Localizer["mtxt"]
         </p>
     </div>
 
@@ -81,7 +78,7 @@
 
     <h1 class="text-center">
         F.A.Q <br/>
-        <span class="fs-5 text-muted" >Foire Aux Questions</span>
+        <span class="fs-5 text-muted">@Localizer["faq"]</span>
     </h1>
 
     @for( int i = 0; i < 5; i++ ) {

@@ -1,0 +1,126 @@
+@{
+    ViewData["Title"] = "Blogs";
+    ViewData["description"] = "Prenez le temps de .............";
+}
+
+
+
+
+
+<div class="container-xl row gy-2 mx-auto px-3">
+
+
+    <main class="col-md-8 py-4 d-flex flex-column">
+
+        <h1>@ViewData["Title"]</h1>
+
+
+        <section class="row g-3 row-cols-2 row-cols-xl-3">
+            <partial name="~/Views/Shared/_PublicationCard.cshtml" />
+            <partial name="~/Views/Shared/_PublicationCard.cshtml" />
+            <partial name="~/Views/Shared/_PublicationCard.cshtml" />
+            <partial name="~/Views/Shared/_PublicationCard.cshtml" />
+            <partial name="~/Views/Shared/_PublicationCard.cshtml" />
+            <partial name="~/Views/Shared/_PublicationCard.cshtml" />
+            <partial name="~/Views/Shared/_PublicationCard.cshtml" />
+            <partial name="~/Views/Shared/_PublicationCard.cshtml" />
+        </section>
+
+
+        <nav aria-label="Page navigation example d-flex flex-wrap gap-3 align-items-center">
+
+            <span>
+                vue 12/45
+            </span>
+
+            <ul class="pagination justify-content-end gap-1">
+                <li class="page-item disabled">
+                <a class="page-link">&lt;</a>
+                </li>
+                <li class="page-item"><a class="page-link border-0" href="#">1</a></li>
+                <li class="page-item"><a class="page-link border-0 active" href="#">2</a></li>
+                <li class="page-item"><a class="page-link border-0" href="#">3</a></li>
+                <li class="page-item">
+                <a class="page-link" href="#">&gt;</a>
+                </li>
+            </ul>
+
+    </main>
+
+    <aside class="col-md-4 py-4 d-flex flex-column gap-3">
+
+
+        <form style="top:64px" class="bg-body-tertiary p-3 sticky-top" action="">
+            <div class="input-group mb-3 rounded-0">
+                <input type="text" class="form-control" placeholder="Titre, Partenaires, team etc" aria-label="Username" aria-describedby="basic-search">
+                <span class="input-group-text bg-body" >
+                    <i id="basic-search" class="bi bi-search"></i>
+                </span>
+            </div>
+
+            <button class="btn btn-success rounded-0 w-100 text-start">
+                <i id="basic-search" class="bi bi-search"></i>
+                Chercher
+            </button>
+        </form>
+
+
+        <section class="bg-body-tertiary p-3">
+
+            <h4 class="mb-3 text-capitalize">Projets Recents</h4>
+
+            @for(var i = 0; i < 4; i++ ) {
+
+                <div class="d-flex gap-2 text-body-secondary pt-3">
+
+                    <img height="64" width="64" src="https://placehold.co/100" alt="...">
+                    
+                    <p class="pb-3 mb-0 small lh-sm border-bottom">
+                        <strong class="d-block text-gray-dark h5">Titre</strong>
+                        Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
+                    </p>
+                </div>
+
+            }
+
+        </section>
+
+
+        <section class="bg-body-tertiary p-3 d-flex flex-wrap gap-3">
+
+            <h4 class="mb-3 text-capitalize w-100">Partenaires</h4>
+
+            @* @for(var i = 0; i < 4; i++ ) {
+
+                <div class="d-flex gap-2 text-body-secondary pt-3">
+
+                    <img height="64" width="64" src="https://placehold.co/100" alt="...">
+                    
+                    <p class="pb-3 mb-0 small lh-sm border-bottom">
+                        <strong class="d-block text-gray-dark h5">Titre</strong>
+                        Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
+                    </p>
+                </div>
+
+            } *@
+
+
+            <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+            <label class="btn" for="option5">WWF</label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+            <label class="btn" for="option6">UNICEF</label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
+            <label class="btn" for="option7">ETC</label>
+
+
+            <button class="btn bg-success-subtle btn-lg col-12">
+               +  voir plus
+            </button>
+        </section>
+
+
+    </aside>
+
+</div>

@@ -47,6 +47,26 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Publications ()
+    {
+        return View();
+    }
+
+    public IActionResult Publication  ()
+    {
+        return View();
+    }
+
+    public IActionResult Blogs ()
+    {
+        return View();
+    }
+
+    public IActionResult Blog  ()
+    {
+        return View();
+    }
+
     public IActionResult Opportunites  ()
     {
         return View();

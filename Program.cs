@@ -2,12 +2,28 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.EntityFrameworkCore;
+using aafeben.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 
 var builder = WebApplication.CreateBuilder(args);
+// DB initialization
+var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContext") ?? throw new InvalidOperationException("Connection string is not correct !!");
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+// _______________________
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(240);
+        options.SlidingExpiration = true;
+        options.AccessDeniedPath = "/Forbidden/";
+        options.LogoutPath = "/fr/Home";
+        options.LoginPath = "/fr/Home/Login";
+    });;
 
 // i18n Localizers +++++++++++++++++++++
-
 
 var supportedCultures = new[] { new CultureInfo(name:"en"), new CultureInfo(name:"fr") };
 var supportedCulturesString = new[] { 
@@ -29,7 +45,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.FallBackToParentCultures= true;
     options.FallBackToParentUICultures= true;
 });
-// +++++++++++++++++++++
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -49,6 +65,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// ____________telling the app to use auth
+app.UseAuthentication();
 app.UseAuthorization();
 
 // i18n middleware +++++++++++++++++++
